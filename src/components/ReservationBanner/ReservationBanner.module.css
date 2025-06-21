@@ -1,0 +1,55 @@
+.section {
+  padding: 4rem 0;
+  background: linear-gradient(rgba(44, 36, 27, 0.9), rgba(44, 36, 27, 0.9)), 
+              url('/banner-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: white;
+}
+
+.container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background-color: #b88b58;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #b88b58;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #b88b58;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
