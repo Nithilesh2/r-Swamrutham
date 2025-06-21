@@ -12,8 +12,8 @@ const Hero = () => {
           <Link to="/menu" className={styles.primaryBtn}>
             View Menu
           </Link>
-          <Link to="/about" className={styles.secondaryBtn}>
-            Learn More →
+          <Link to="/catering" className={styles.secondaryBtn}>
+            Catering
           </Link>
         </div>
       </div>
