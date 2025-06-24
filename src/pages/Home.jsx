@@ -1,8 +1,8 @@
-import Hero from "../components/Hero/Hero";
+import Hero from "../components/Hero/Hero"
 import FeaturedDishes from "../components/FeaturedDishes/FeaturedDishes"
 import AboutSection from "../components/AboutSection/AboutSection"
-import Testimonials from "../components/Testimonials/Testimonials"
 import ReservationBanner from "../components/ReservationBanner/ReservationBanner"
+import AvailableOn from "../components/AvailableOn/AvailableOn"
 
 const Home = () => {
   return (
@@ -10,10 +10,10 @@ const Home = () => {
       <Hero />
       <FeaturedDishes />
       <AboutSection />
-      <Testimonials />
+      <AvailableOn /> 
       <ReservationBanner />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
