@@ -1,29 +1,33 @@
-import styles from "./FeaturedDishes.module.css";
+import styles from "./FeaturedDishes.module.css"
+import f1 from "../../assets/Food/chicken-fry-piece-biryani.jpg"
+import f2 from "../../assets/Food/veg-noodles.jpg"
+import f3 from "../../assets/Food/manchuriyan.png"
 
 const FeaturedDishes = () => {
   const dishes = [
     {
       id: 1,
-      name: "Signature Butter Chicken",
-      description: "Tender chicken in our secret creamy tomato sauce",
-      price: "₹450",
-      image: "/butter-chicken.jpg"
+      name: "Veg Manchuriyan",
+      description:
+        "Manchuriyan is tasty, not totally crispy or spongy — it's soft, easy to eat, and mildly spiced (not too spicy, but not bland either).",
+      price: "₹380",
+      image: f3,
     },
     {
       id: 2,
-      name: "Paneer Makhani",
-      description: "Cottage cheese in rich buttery gravy",
-      price: "₹380",
-      image: "/paneer-makhani.jpg"
+      name: "Chicken Fry Piece Biryani",
+      description: "Flavorful biryani served with juicy chicken fry pieces",
+      price: "₹490",
+      image: f1,
     },
     {
       id: 3,
-      name: "Lamb Biryani",
-      description: "Aromatic basmati rice with tender lamb pieces",
-      price: "₹550",
-      image: "/biryani.jpg"
-    }
-  ];
+      name: "Vegetable Noodles",
+      description: "Stir-fried noodles with fresh vegetables and sauces",
+      price: "₹270",
+      image: f2,
+    },
+  ]
 
   return (
     <section className={styles.section}>
@@ -32,12 +36,16 @@ const FeaturedDishes = () => {
           <h2>Our Signature Dishes</h2>
           <p>Chef's special creations that define our culinary excellence</p>
         </div>
-        
+
         <div className={styles.dishes}>
-          {dishes.map(dish => (
+          {dishes.map((dish) => (
             <div key={dish.id} className={styles.dishCard}>
               <div className={styles.imageContainer}>
-                <img src={dish.image} alt={dish.name} className={styles.image} />
+                <img
+                  src={dish.image}
+                  alt={dish.name}
+                  className={styles.image}
+                />
               </div>
               <div className={styles.dishInfo}>
                 <h3>{dish.name}</h3>
@@ -49,7 +57,7 @@ const FeaturedDishes = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default FeaturedDishes;
+export default FeaturedDishes

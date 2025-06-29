@@ -1,0 +1,227 @@
+.galleryContainer {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+}
+.galleryHero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://b.zmtcdn.com/data/pictures/3/21922063/a04b763ef2b3d4cb59668df507f70c69.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+}
+.heroContent {
+  max-width: 800px;
+  padding: 0 1rem;
+}
+.heroContent h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.heroContent p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.galleryWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+.categoryFilters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.filterButton {
+  padding: 0.75rem 1.5rem;
+  background: #f8f3ed;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #555;
+}
+.filterButton:hover {
+  background: #e8d9c5;
+}
+.filterButton.active {
+  background: #d97706;
+  color: white;
+}
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.imageCard {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.imageCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.imageWrapper {
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+}
+.galleryImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.imageCard:hover .galleryImage {
+  transform: scale(1.05);
+}
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.imageCard:hover .imageOverlay {
+  opacity: 1;
+}
+.imageOverlay h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+.imageCard:hover .imageOverlay h3 {
+  transform: translateY(0);
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+.modalContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 93vh;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease-out;
+}
+.modalImage {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+.closeButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.imageCaption {
+  padding: 1.5rem;
+  background: white;
+  text-align: center;
+}
+.imageCaption h3 {
+  font-family: "Playfair Display", serif;
+  color: #d97706;
+  margin-bottom: 0.5rem;
+}
+.imageCaption p {
+  color: #666;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .galleryHero {
+    height: 250px;
+  }
+  .heroContent h1 {
+    font-size: 2.2rem;
+  }
+  .heroContent p {
+    font-size: 1rem;
+  }
+  .imageGrid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .modalContent {
+    max-width: 95%;
+  }
+  .imageCaption {
+    padding: 1rem;
+  }
+}

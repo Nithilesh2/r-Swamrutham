@@ -1,5 +1,5 @@
 import styles from "./AboutSection.module.css"
-import restaurant from "../../assets/restaurant.png"
+import restaurant from "../../assets/Restaurant/IMG-20250629-WA0043.jpg"
 
 const AboutSection = () => {
   return (

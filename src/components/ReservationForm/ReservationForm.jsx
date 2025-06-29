@@ -10,7 +10,7 @@ const ReservationForm = () => {
         onClick={() => setIsOpen(true)}
         className={styles.reserveButton}
       >
-        Reserve a Seat
+        Reserve Table
       </button>
 
       {isOpen && (

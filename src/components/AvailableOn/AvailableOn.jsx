@@ -6,7 +6,7 @@ const AvailableOn = () => {
   return (
     <>
       <div className={styles.main}>
-        <h2 className={styles.orderNow}>Order Now</h2>
+        <h2 className={styles.orderNow}>Available On</h2>
         <div className={styles.logosContainer}>
           <a
             href="https://www.swiggy.com/city/hyderabad/swamrutham-family-restaurant-miyapur-rest1099511"

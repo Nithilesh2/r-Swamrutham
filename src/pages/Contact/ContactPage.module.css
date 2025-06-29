@@ -4,14 +4,16 @@
   line-height: 1.6;
 }
 .hero {
-  background: url("https://st2.depositphotos.com/1013107/5289/i/450/depositphotos_52896365-Wooden-table-and-blur-restaurant-background.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://b.zmtcdn.com/data/pictures/3/21922063/a04b763ef2b3d4cb59668df507f70c69.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: white;
   margin-bottom: 3rem;
 }
 .heroContent {
