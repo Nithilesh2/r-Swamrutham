@@ -8,8 +8,20 @@ const AvailableOn = () => {
       <div className={styles.main}>
         <h2 className={styles.orderNow}>Order Now</h2>
         <div className={styles.logosContainer}>
-          <img src={swiggy} className={styles.logos} alt="swiggy logo" />
-          <img src={zomato} className={styles.logos} alt="zomato logo" />
+          <a
+            href="https://www.swiggy.com/city/hyderabad/swamrutham-family-restaurant-miyapur-rest1099511"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={swiggy} className={styles.logos} alt="Swiggy logo" />
+          </a>
+          <a
+            href="https://www.zomato.com/hyderabad/swamrutham-family-restaurant-chanda-nagar/order"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={zomato} className={styles.logos} alt="Zomato logo" />
+          </a>
         </div>
       </div>
     </>

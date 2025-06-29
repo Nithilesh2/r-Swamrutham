@@ -46,19 +46,9 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  height: 550px;
 }
-
-.imageContainer img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.imageContainer:hover img {
-  transform: scale(1.03);
-}
-
 @media (max-width: 768px) {
   .section {
     padding: 3rem 0;

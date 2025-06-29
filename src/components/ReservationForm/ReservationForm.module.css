@@ -1,75 +1,156 @@
 .reserveButton {
-  background: #D97706;
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
   color: white;
-  padding: 0.5rem 1rem;
+  height: 50px;
+  width: 180px;
   border: none;
-  border-radius: 0.5rem;
-  font-weight: 500;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  font-family: "Playfair Display", serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
 }
-
-.reserveButton:hover {
-  background: #B45309;
+.reserveButton:active {
+  transform: translateY(0);
 }
-
 .modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease-out;
 }
-
 .modal {
   background: white;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  padding: 2rem;
+  border-radius: 12px;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.4s ease-out;
 }
-
 .modalHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
 }
-
+.title {
+  color: #333;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  margin: 0;
+  font-size: 2rem;
+}
 .closeButton {
   background: none;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: #777;
+  transition: color 0.2s;
+  padding: 0.5rem;
+  line-height: 1;
 }
-
+.closeButton:hover {
+  color: #333;
+}
 .form {
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.label {
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  color: black;
+  font-weight: 600;
+}
+.input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background-color: #f9f9f9;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #d97706;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.2);
+  background-color: white;
+}
+
+.dateTimeContainer {
+  display: flex;
   gap: 1rem;
 }
 
-.input {
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 0.25rem;
+.dateTimeContainer .inputGroup {
+  flex: 1;
 }
 
 .submitButton {
-  background: #D97706;
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
   color: white;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+.submitButton:active {
+  transform: translateY(0);
 }
 
-.submitButton:hover {
-  background: #B45309;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+  .modal {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .dateTimeContainer {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
 }
